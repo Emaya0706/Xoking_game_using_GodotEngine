@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/game/multiplayer/3x3/SelectableAreaM.gd" type="Script" id=1]
+
+[node name="POS" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 33.0
+margin_bottom = 29.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

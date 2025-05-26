@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://tvwiplxltif6"
+path="res://.godot/imported/Dancing Minotaur.ttf-9e64c376be4b5bf8886dcc811e9d922d.fontdata"
+
+[deps]
+
+source_file="res://room/images/fonts/Dancing Minotaur.ttf"
+dest_files=["res://.godot/imported/Dancing Minotaur.ttf-9e64c376be4b5bf8886dcc811e9d922d.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

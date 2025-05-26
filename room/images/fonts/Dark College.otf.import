@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://qhh2xt78x3sv"
+path="res://.godot/imported/Dark College.otf-f2fdc1de29386fc82c29b3c9a46cef1d.fontdata"
+
+[deps]
+
+source_file="res://room/images/fonts/Dark College.otf"
+dest_files=["res://.godot/imported/Dark College.otf-f2fdc1de29386fc82c29b3c9a46cef1d.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

@@ -1,0 +1,175 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://images/backgroud/ground.png" type="Texture" id=1]
+[ext_resource path="res://fonts/KOMIKAX_.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/UI/profiles.gd" type="Script" id=3]
+[ext_resource path="res://images/symbol/back4.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.443137, 0, 0.6 )
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 9
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.788235, 0.454902, 0.188235, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 10
+border_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+border_blend = true
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0.6 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.952941, 1, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.952941, 1, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.129412, 0.121569, 0.121569, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_size = 2
+
+[sub_resource type="DynamicFont" id=6]
+size = 41
+outline_size = 3
+outline_color = Color( 0.0313726, 0, 1, 0.6 )
+extra_spacing_char = 4
+font_data = ExtResource( 2 )
+
+[node name="profiles" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 321, 530 )
+scale = Vector2( 1.11333, 1.12305 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="up" type="PanelContainer" parent="."]
+margin_top = -1.0
+margin_right = 601.0
+margin_bottom = 110.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 1.0
+margin_top = 891.0
+margin_right = 597.0
+margin_bottom = 1023.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+margin_left = 19.0
+margin_top = 154.0
+margin_right = 590.0
+margin_bottom = 470.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 48.0
+margin_top = 923.0
+margin_right = 125.0
+margin_bottom = 992.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back4" type="Sprite" parent="Button"]
+position = Vector2( 39, 38 )
+scale = Vector2( 0.715, 0.615 )
+texture = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="Button/Back4"]
+margin_left = -39.1609
+margin_top = -1227.64
+margin_right = 254.839
+margin_bottom = -886.642
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 6.0
+margin_right = 244.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "profile"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

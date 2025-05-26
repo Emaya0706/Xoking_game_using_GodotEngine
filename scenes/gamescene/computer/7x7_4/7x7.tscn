@@ -1,0 +1,349 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://fonts/KOMIKAX_.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Darkness of the night.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://images/backgroud/ground.png" type="Texture" id=3]
+[ext_resource path="res://scripts/game/computer/7x7_4/7x7.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+outline_size = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.423529, 0.164706, 0.8, 0.6 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 49
+corner_radius_top_right = 49
+corner_radius_bottom_right = 49
+corner_radius_bottom_left = 49
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.423529, 0.164706, 0.8, 0.6 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 18
+
+[sub_resource type="DynamicFont" id=4]
+size = 31
+outline_size = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+outline_size = 4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+draw_center = false
+
+[sub_resource type="DynamicFont" id=8]
+size = 22
+outline_size = 3
+outline_color = Color( 0.0901961, 0.0784314, 0.0784314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.890196, 0.415686, 0.482353, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 49
+corner_radius_top_right = 49
+corner_radius_bottom_right = 49
+corner_radius_bottom_left = 49
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.890196, 0.415686, 0.482353, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 49
+corner_radius_top_right = 49
+corner_radius_bottom_right = 49
+corner_radius_bottom_left = 49
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.890196, 0.415686, 0.482353, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 18
+
+[sub_resource type="DynamicFont" id=13]
+size = 31
+outline_size = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="DynamicFont" id=15]
+size = 46
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 22
+outline_size = 3
+outline_color = Color( 0.0901961, 0.0784314, 0.0784314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0, 0, 0, 1 )
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.054902, 0, 1, 1 )
+border_blend = true
+shadow_color = Color( 0.054902, 0, 1, 1 )
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.588235, 0.309804, 0.0862745, 1 )
+border_width_top = 5
+border_color = Color( 0, 0, 0, 0.6 )
+border_blend = true
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+shadow_size = 12
+
+[sub_resource type="DynamicFont" id=19]
+size = 31
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 0.984314, 0, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="7 page" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 282, 514 )
+scale = Vector2( 1.03333, 1.02148 )
+texture = ExtResource( 3 )
+
+[node name="7x7_4" type="Button" parent="."]
+margin_left = 78.0
+margin_top = 74.0
+margin_right = 515.0
+margin_bottom = 413.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price2" type="Label" parent="7x7_4"]
+margin_left = 62.0
+margin_top = 117.0
+margin_right = 374.0
+margin_bottom = 194.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "   price : 900"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="three" type="Label" parent="7x7_4"]
+margin_left = 37.0
+margin_top = 6.0
+margin_right = 398.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0.870588, 0.709804, 0.160784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "best of three"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="entry" type="Label" parent="7x7_4"]
+margin_left = 81.0
+margin_top = 226.0
+margin_right = 355.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 1, 0, 0.686275, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "    entry fee  : 450"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7x7_5" type="Button" parent="."]
+margin_left = 78.0
+margin_top = 504.0
+margin_right = 515.0
+margin_bottom = 843.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price2" type="Label" parent="7x7_5"]
+margin_left = 59.0
+margin_top = 127.0
+margin_right = 393.0
+margin_bottom = 204.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+text = "   price : 1500"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="7x7_5"]
+margin_left = 62.0
+margin_top = 10.0
+margin_right = 412.0
+margin_bottom = 141.0
+custom_colors/font_color = Color( 0.870588, 0.709804, 0.160784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "best of five"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="entry" type="Label" parent="7x7_5"]
+margin_left = 80.0
+margin_top = 245.0
+margin_right = 348.0
+margin_bottom = 310.0
+custom_colors/font_color = Color( 0.156863, 0.635294, 0.164706, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "    entry fee  : 750"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = -13.0
+margin_top = 910.0
+margin_right = 618.0
+margin_bottom = 1026.0
+custom_styles/panel = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 928.0
+margin_right = 165.0
+margin_bottom = 1006.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="7x7_4" to="." method="_on_7x7_4_pressed"]
+[connection signal="pressed" from="7x7_5" to="." method="_on_7x7_5_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

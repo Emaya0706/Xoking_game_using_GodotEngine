@@ -1,0 +1,432 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://fonts/Dancing Minotaur.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://images/ground.png" type="Texture" id=2]
+[ext_resource path="res://room/screens/matchfixing.gd" type="Script" id=3]
+[ext_resource path="res://room/screens/PeerStatus.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://KOMIKAX_.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
+draw_center = false
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color( 0.854902, 0.384314, 0.00784314, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 15
+shadow_color = Color( 0.4, 0.188235, 0.0196078, 1 )
+shadow_size = 9
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+outline_size = 3
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 1 )
+fallback/1 = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.321569, 0.207843, 0.117647, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 20
+shadow_color = Color( 0.772549, 0.592157, 0.45098, 1 )
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id=4]
+draw_center = false
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color( 0.854902, 0.384314, 0.00784314, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0.4, 0.188235, 0.0196078, 1 )
+shadow_size = 9
+
+[sub_resource type="DynamicFont" id=5]
+size = 65
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_char = 3
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+outline_size = 6
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 3
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.00784314, 0.490196, 1, 0.6 )
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_blend = true
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+outline_size = 4
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+outline_size = 4
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 35
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.854902, 0.384314, 0.00784314, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.356863, 0.243137, 0.156863, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 17
+shadow_color = Color( 0.447059, 0.4, 0.364706, 1 )
+shadow_size = 6
+
+[sub_resource type="DynamicFont" id=14]
+size = 35
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 0.984314, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 15
+
+[node name="ReadyScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = -9.0
+margin_right = -4.0
+margin_bottom = -9.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 298, 516 )
+scale = Vector2( 1.025, 1.01758 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="imglabel1" type="Label" parent="."]
+margin_left = 78.0
+margin_top = 466.0
+margin_right = 228.0
+margin_bottom = 616.0
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img1" type="TextureRect" parent="imglabel1"]
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 145.0
+margin_bottom = 144.0
+texture = ExtResource( 5 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="imglabel1"]
+margin_left = 18.0
+margin_top = 175.0
+margin_right = 116.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="imaglabel2" type="Label" parent="."]
+margin_left = 390.0
+margin_top = 466.0
+margin_right = 540.0
+margin_bottom = 616.0
+custom_styles/normal = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="imaglabel2"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 144.0
+margin_bottom = 144.0
+texture = ExtResource( 5 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="imaglabel2"]
+margin_left = 29.0
+margin_top = 174.0
+margin_right = 127.0
+margin_bottom = 223.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 252.0
+margin_top = 488.0
+margin_right = 376.0
+margin_bottom = 595.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Vs"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 127.0
+margin_top = 90.0
+margin_right = 473.0
+margin_bottom = 157.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Best of three"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="."]
+margin_left = 19.0
+margin_top = 169.0
+margin_right = 590.0
+margin_bottom = 391.0
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel3"]
+margin_left = 40.0
+margin_top = 129.0
+margin_right = 396.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 10 )
+text = "Align Of Board    ="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel3/Label3"]
+margin_left = 372.0
+margin_top = 5.0
+margin_right = 467.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 11 )
+text = "3x3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel3"]
+margin_left = 40.0
+margin_top = 35.0
+margin_right = 393.0
+margin_bottom = 103.0
+custom_fonts/font = SubResource( 11 )
+text = "Size Of Board      ="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel3/Label2"]
+margin_left = 386.0
+margin_top = 4.0
+margin_right = 472.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 11 )
+text = "3x3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="total" type="Label" parent="."]
+margin_left = 210.0
+margin_top = 793.0
+margin_right = 384.0
+margin_bottom = 858.0
+custom_fonts/font = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "200"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -718.0
+margin_top = 167.0
+margin_right = -818.0
+margin_bottom = -573.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReadyButton" type="Button" parent="Panel"]
+margin_left = 1101.0
+margin_top = 763.0
+margin_right = 1298.0
+margin_bottom = 840.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 15 )
+text = "ready"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchIDContainer" type="HBoxContainer" parent="Panel"]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 530.0
+margin_bottom = 39.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/MatchIDContainer"]
+margin_top = 10.0
+margin_right = 62.0
+margin_bottom = 24.0
+text = "Match ID:"
+
+[node name="MatchID" type="LineEdit" parent="Panel/MatchIDContainer"]
+margin_left = 62.0
+margin_right = 477.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 3
+text = "XXXX-XXXX-XXXX-XXXX"
+editable = false
+
+[node name="MatchCopyButton" type="Button" parent="Panel/MatchIDContainer"]
+margin_left = 477.0
+margin_right = 520.0
+margin_bottom = 34.0
+text = "Copy"
+
+[node name="StatusContainer" type="VBoxContainer" parent="Panel"]
+margin_left = 4.0
+margin_top = 71.0
+margin_right = 484.0
+margin_bottom = 217.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PeerStatus" parent="Panel/StatusContainer" instance=ExtResource( 4 )]
+margin_right = 480.0
+margin_bottom = 24.0
+
+[node name="ReadyButton2" type="Button" parent="Panel"]
+margin_left = 111.0
+margin_top = 733.0
+margin_right = 233.0
+margin_bottom = 763.0
+size_flags_horizontal = 4
+disabled = true
+text = "I'm Ready!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Panel/ReadyButton" to="." method="_on_ReadyButton_pressed"]

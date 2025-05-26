@@ -1,0 +1,420 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://room/images/fonts/BebasNeue-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://room/images/mb5.png" type="Texture" id=2]
+[ext_resource path="res://room/images/fonts/Dancing Minotaur.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://room/images/back4.png" type="Texture" id=5]
+[ext_resource path="res://room/images/fonts/KOMIKAX_.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://room/images/fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://main/screens/PeerStatus.tscn" type="PackedScene" id=8]
+[ext_resource path="res://room/screens/ReadyScreen.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.6 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="DynamicFont" id=2]
+size = 31
+outline_size = 3
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 52
+outline_size = 3
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 14
+outline_size = 3
+outline_color = Color( 0.156863, 0.141176, 0.141176, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_char = 4
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.921569, 0.698039, 0.698039, 1 )
+corner_detail = 20
+
+[sub_resource type="DynamicFont" id=12]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 0.984314, 0, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 6
+
+[sub_resource type="DynamicFont" id=6]
+size = 31
+outline_size = 4
+outline_color = Color( 0.478431, 0.466667, 0.466667, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+outline_size = 3
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_size = 4
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+outline_size = 4
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.537255, 0.454902, 0.870588, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+outline_size = 3
+outline_color = Color( 0.2, 0.192157, 0.192157, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="ReadyScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Mb5" type="Sprite" parent="."]
+position = Vector2( 304, 519.5 )
+scale = Vector2( 1.07, 1.06543 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 42.0
+margin_top = 37.0
+margin_right = 569.0
+margin_bottom = 500.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchIDContainer" type="Node2D" parent="Panel2"]
+
+[node name="Label" type="Label" parent="Panel2/MatchIDContainer"]
+margin_left = 25.0
+margin_top = 76.0
+margin_right = 215.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 2 )
+text = "room code"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel2/MatchIDContainer"]
+margin_left = 823.0
+margin_top = 156.0
+margin_right = 836.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 3 )
+text = ":"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchID" type="LineEdit" parent="Panel2/MatchIDContainer"]
+margin_left = 252.0
+margin_top = 81.0
+margin_right = 468.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/read_only = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+text = "123456789123456"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchCopyButton" type="Button" parent="Panel2/MatchIDContainer"]
+margin_left = 473.0
+margin_top = 82.0
+margin_right = 519.0
+margin_bottom = 125.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 13 )
+text = "copy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel2"]
+margin_left = 41.0
+margin_top = 134.0
+margin_right = 468.0
+margin_bottom = 296.0
+custom_colors/font_color = Color( 0.14902, 0.141176, 0.141176, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "copy the code and share to the friend
+and ask them to join"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="board_choose" type="Label" parent="Panel2"]
+margin_left = 28.0
+margin_top = 274.0
+margin_right = 381.0
+margin_bottom = 342.0
+custom_fonts/font = SubResource( 7 )
+text = "Size Of Board      ="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="board_size" type="Label" parent="Panel2/board_choose"]
+margin_left = 342.0
+margin_top = 1.0
+margin_right = 428.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 8 )
+text = "3x3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="align" type="Label" parent="Panel2"]
+margin_left = 21.0
+margin_top = 347.0
+margin_right = 377.0
+margin_bottom = 406.0
+custom_fonts/font = SubResource( 7 )
+text = "Align Of Board    ="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="align_size" type="Label" parent="Panel2/align"]
+margin_left = 343.0
+margin_top = 5.0
+margin_right = 438.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 9 )
+text = "3x3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReadyButton" type="Button" parent="Panel2"]
+margin_left = 352.0
+margin_top = 860.0
+margin_right = 518.0
+margin_bottom = 931.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 13 )
+text = "ready"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="imglabel1" type="Label" parent="."]
+margin_left = 51.0
+margin_top = 636.0
+margin_right = 242.0
+margin_bottom = 828.0
+custom_styles/normal = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img1" type="TextureRect" parent="imglabel1"]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 181.0
+margin_bottom = 179.0
+texture = ExtResource( 4 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="imglabel2" type="Label" parent="."]
+margin_left = 375.0
+margin_top = 636.0
+margin_right = 566.0
+margin_bottom = 828.0
+custom_styles/normal = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img1" type="TextureRect" parent="imglabel2"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 179.0
+margin_bottom = 178.0
+texture = ExtResource( 4 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 245.0
+margin_top = 665.0
+margin_right = 369.0
+margin_bottom = 772.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Vs"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+margin_left = -833.0
+margin_top = 69.0
+margin_right = -727.0
+margin_bottom = 150.0
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back4" type="Sprite" parent="back"]
+position = Vector2( 55, 47 )
+scale = Vector2( 0.94, 0.84 )
+texture = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -632.0
+margin_top = 37.0
+margin_right = -732.0
+margin_bottom = -63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchIDContainer2" type="HBoxContainer" parent="Panel"]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 530.0
+margin_bottom = 39.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/MatchIDContainer2"]
+margin_top = 10.0
+margin_right = 62.0
+margin_bottom = 24.0
+text = "Match ID:"
+
+[node name="MatchID" type="LineEdit" parent="Panel/MatchIDContainer2"]
+margin_left = 62.0
+margin_right = 477.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 3
+text = "XXXX-XXXX-XXXX-XXXX"
+editable = false
+
+[node name="MatchCopyButton" type="Button" parent="Panel/MatchIDContainer2"]
+margin_left = 477.0
+margin_right = 520.0
+margin_bottom = 34.0
+text = "Copy"
+
+[node name="StatusContainer" type="VBoxContainer" parent="Panel"]
+margin_left = 679.0
+margin_top = 479.0
+margin_right = 1159.0
+margin_bottom = 598.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PeerStatus" parent="Panel/StatusContainer" instance=ExtResource( 8 )]
+margin_right = 480.0
+margin_bottom = 24.0
+
+[connection signal="pressed" from="Panel2/MatchIDContainer/MatchCopyButton" to="." method="_on_MatchCopyButton_pressed"]
+[connection signal="pressed" from="Panel2/ReadyButton" to="." method="_on_ReadyButton_pressed"]
